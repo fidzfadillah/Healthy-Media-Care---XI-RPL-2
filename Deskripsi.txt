@@ -1,0 +1,15 @@
+TA PWPB GENAP
+=============
+
+Kelas : XI RPL 2
+
+Health Media Center : website penyedia informasi 
+		perkembangan kasus virus Covid-19 
+		di Indonesia.
+
+Pembagian tugas:
+- Front-end designer : Muhammad Hafidz Fadillah (23)
+
+- Back-end programmer : Yusuf Dwi Munif A. (36)
+
+- designer, data collector, tester : Muhammad Yusuf Aditya (18)
