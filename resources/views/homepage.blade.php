@@ -27,6 +27,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#ff920a">
     <link rel="stylesheet" href="{{ asset('/assets/css/home.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ff74694b5e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -47,41 +48,10 @@
             padding: 0;
         }
 
-        #sec-top{
-            padding: 20vh 5vh 0 5vh;
-        }
-
-        #sec-bot{
-            /* background: url("{{ asset('/assets/pict/wr.jpg') }}"); */
-            background-size: cover; 
-            padding: 10vh 0 10vh 0; 
-            height: auto;
-        }
-
-        .scroll{
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 0 10px 0 #dfdfdf;
-        }
-
-        .trans{
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        /* #news{
-            background: linear-gradient(to top, #ff7e89, #fac4c9, #ffffff);
-            background-size: cover;
-        } */
-
         @media screen and (max-width: 800px){
             .logo{
                 margin-left: 20px;
-                /* width: 10vh; */
                 height: 35px;
-            }
-
-            #sec-top{
-                padding-top: 20vh;
-                height: 70vh;
             }
         }
     </style>
@@ -96,18 +66,13 @@
         </a>
 
         <div class="menu">
-            <!-- <a href="#">Home</a> -->
             <a href="#kasus">Data</a>
-            <a href="#">Berita</a>
-            <a href="{{ url('/kontak') }}">Kontak</a>
+            <a href="{{ url('/berita') }}">Berita</a>
+            <a href="{{ url('/kontak') }}">Call Center & RS Rujukan</a>
             <a href="https://www.halodoc.com/layanan-rapid-test">Rapid Test Drivethru</a>
             <a href="{{ url('/login') }}" id="adm-log">Login Admin</a>
         </div>
     </div>
-
-    <!-- bagian popup -->
-	
-	<!-- akhir dari popup -->
 
     <section id="sec-top">
             <div class="container">
@@ -131,7 +96,6 @@
     <section id="kasus">
         <div id="container">
         <h1>info kasus penyebaran</h1>
-        <div class="border"></div>
             <!-- tambah ?dark=true klo mau dark mode-->
             <iframe src="https://widget.kopi.dev/corona"></iframe>
             
@@ -275,7 +239,6 @@
         });
 
         window.onscroll = function() {scrollfunction()};
-        window.onmousemove = function() {fade()};
 
         function scrollfunction() {
             if(document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
@@ -287,21 +250,13 @@
             }
         }
 
-        $(document).ready(function(){
-		    $('a.close').click(function(eve){
-			
-			    eve.preventDefault();
-		    	$(this).parents('div.popup').fadeOut('slow');
-		    });
-    	});
-
         //button scroll to top
         $("#btnTop").click(function() {
             $('html, body').animate({scrollTop : 0}, 1000);
         });
 
         //animate on scroll
-        AOS.init();
+        // AOS.init();
     </script>
     
 </body>

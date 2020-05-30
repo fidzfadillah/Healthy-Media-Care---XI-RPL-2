@@ -13,4 +13,11 @@ class HealthController extends Controller
 
         return view('kontak', $data);
     }
+
+    public function indexBerita()
+    {
+        // $data['berita'] = \DB::table('t_berita')->get();
+
+        return view('berita');
+    }
 }

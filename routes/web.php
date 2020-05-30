@@ -27,3 +27,6 @@ Route::get('/kontak', 'HealthController@indexKontak');
 Route::get('/login', function() {
     return view('login');
 });
+
+// Route::get('/berita', 'HealthController@indexBerita');
+

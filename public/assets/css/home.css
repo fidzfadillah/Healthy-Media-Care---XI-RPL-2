@@ -4,12 +4,28 @@
 }
 
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #555;
 }
 
-/* POP UP BERITA*/
+#sec-top{
+    padding: 20vh 5vh 0 5vh;
+}
 
+#sec-bot{
+    background-size: cover; 
+    padding: 10vh 0 10vh 0; 
+    height: auto;
+}
+
+.scroll{
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px 0 #dfdfdf;
+}
+
+.trans{
+    background: rgba(255, 255, 255, 0.9);
+}
 
 /* widget */
 iframe{
@@ -26,10 +42,10 @@ iframe{
     right: 5vh;
     bottom: 5vh;
     font-size: 26px;
-    padding: 18px;
+    padding: 10px 15px;
     border: none;
     outline: none;
-    border-radius: 50%;
+    border-radius: 5px;
     background: rgb(255, 59, 134);
     color: #fff;
     cursor: pointer;
@@ -118,9 +134,8 @@ a#adm-log{
 }
 
 .intro h1{
-    font-size: 60px;
+    font-size: 54px;
     text-transform: uppercase;
-    font-weight: bold;
     margin: 0;
 }
 
@@ -354,6 +369,11 @@ section{
 }
 
 @media only screen and (max-width: 800px){
+    #sec-top{
+        padding-top: 20vh;
+        height: 70vh;
+    }
+    
     #navbar{
         overflow: visible;
         height: 60px;
@@ -393,6 +413,7 @@ section{
 
     .buttonn button{
         padding: 5px 10px;
+        width: fit-content;
     }
 
     .show{
