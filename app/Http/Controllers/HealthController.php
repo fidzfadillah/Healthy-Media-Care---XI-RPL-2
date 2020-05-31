@@ -16,8 +16,7 @@ class HealthController extends Controller
 
     public function indexBerita()
     {
-        // $data['berita'] = \DB::table('t_berita')->get();
-
+        $data['berita'] = \DB::table('t_berita')->get();
         return view('berita');
     }
 }

@@ -29,6 +29,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ff920a">
+    <title>Healthy Media Care</title>
     <link rel="stylesheet" href="{{ asset('/assets/css/home.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
@@ -76,10 +77,10 @@
 
         <div class="menu">
             <a href="#kasus">Data</a>
-            <a href="{{ url('/berita') }}">Berita</a>
+            <a href="{{ url('/news') }}">Berita</a>
             <a href="{{ url('/kontak') }}">Call Center & RS Rujukan</a>
             <a href="https://www.halodoc.com/layanan-rapid-test">Rapid Test Drivethru</a>
-            <a href="{{ url('/login') }}" id="adm-log">Login Admin</a>
+            <a href="{{ url('/admin') }}" id="adm-log">Admin</a>
         </div>
     </div>
 

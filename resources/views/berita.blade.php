@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Berita</title>
     <link rel="stylesheet" href="{{asset('/assets/css/berita.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -52,7 +52,7 @@
             <a href="{{ url('/home#kasus') }}">Data</a>
             <a href="{{ url('/kontak') }}">Call Center & RS Rujukan</a>
             <a href="https://www.halodoc.com/layanan-rapid-test">Rapid Test Drivethru</a>
-            <a href="{{ url('/login') }}" id="adm-log">Login Admin</a>
+            <a href="{{ url('/admin') }}" id="adm-log">Admin</a>
         </div>
     </div>
     <div class="container">
