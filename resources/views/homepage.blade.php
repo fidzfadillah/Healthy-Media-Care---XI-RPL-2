@@ -1,5 +1,14 @@
 <?php
-
+    function cek_internet(){
+        $connected = @fsockopen("www.google.com", 80);
+        if ($connected){
+            $is_conn = true; //jika koneksi tersambung
+            fclose($connected);
+        } else {
+            $is_conn = false; //jika koneksi gagal
+        }
+     return $is_conn;
+    }
     // $tanggal = mktime(date('m'), date("d"), date('Y'));
     date_default_timezone_set("Asia/Jakarta");
 
@@ -12,11 +21,6 @@
         curl_close($data);
         return $hasil;
     }
-
-    $sumber = resourceWeb("https://kawalcorona.com/");
-
-    $positif = explode("<thead>", $sumber);
-    $positifLagi = explode("<td>Daerah Istimewa Yogyakarta</td>", $positif[1]);
 ?>
 <html lang="en">
 <head>
@@ -46,6 +50,11 @@
             float: left;
             margin-left: 40px;
             padding: 0;
+        }
+
+        .geser{
+            transition: 0.4s;
+            margin-right: 10vh;
         }
 
         @media screen and (max-width: 800px){
@@ -95,21 +104,30 @@
 
     <section id="kasus">
         <div id="container">
-        <h1>info kasus penyebaran</h1>
+            <h1>info kasus penyebaran</h1>
             <!-- tambah ?dark=true klo mau dark mode-->
             <iframe src="https://widget.kopi.dev/corona"></iframe>
             
             <?php
-                echo "<table border='1' cellspacing='0' style='margin: auto; width: 100%; background: rgba(255,255,255,0.7);'>";
-                echo "<thead>";
-                echo $positifLagi[0];
-                echo "</tr></tbody></table>";
+                if (cek_internet() == true){
+                    $sumber = resourceWeb("https://kawalcorona.com/");
+                    $positif = explode("<thead>", $sumber);
+                    $positifLagi = explode("<td>Daerah Istimewa Yogyakarta</td>", $positif[1]);
+
+                    echo "<table border='1' cellspacing='0' style='margin: auto; width: 100%; background: rgba(255,255,255,0.7);'>";
+                    echo "<thead>";
+                    echo $positifLagi[0];
+                    echo "</tr></tbody></table>";
+                } else {
+                    echo "<div style='background: rgba(255, 255, 255, 0.7); padding: 5vh; text-align: center; border-radius: 5px'>";
+                    echo "<h2>Nyalakan koneksi internet untuk melihat data</h2>";
+                    echo "</div>";
+                }
+                
             ?>
             <br><br>
             <center><p><a href="https://kawalcorona.com" style='text-decoration: none; font-size: 20px; color: rgb(255, 59, 134);'>Lihat Selengkapnya</a></p><p>Sumber Data : Kementerian Kesehatan & JHU</p></center>
-            <!-- widget humas jabar 
-            <div id="widget-humas-jabar"></div>
-            <script src="http://humas.jabarprov.go.id/js/widget-humas.min.js"></script>-->
+            
         </div>
     </section>
 
@@ -231,6 +249,9 @@
     </section>
 
     <button id="btnTop"><i class="fas fa-arrow-up"></i></button>
+    <a href="https://api.whatsapp.com/send?phone=6285697391854&text=Halo%20Admin%21%20Saya%20ingin%20tanya%20seputar%20PIKOBAR&source=&data=&app_absent=">
+        <button id="btnWa"><i class="fab fa-whatsapp"></i></button>
+    </a>
 
     <script>
         $(".btn").on("click",function(){
@@ -243,9 +264,11 @@
         function scrollfunction() {
             if(document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
                 document.getElementById("navbar").className = "scroll";
+                document.getElementById("btnWa").className = "geser";
                 $('#btnTop').fadeIn();
             } else {
                 document.getElementById("navbar").className = "";
+                document.getElementById("btnWa").className = "";
                 $('#btnTop').fadeOut();
             }
         }

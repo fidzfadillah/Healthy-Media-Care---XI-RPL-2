@@ -28,5 +28,5 @@ Route::get('/login', function() {
     return view('login');
 });
 
-// Route::get('/berita', 'HealthController@indexBerita');
+Route::get('/berita', 'HealthController@indexBerita');
 

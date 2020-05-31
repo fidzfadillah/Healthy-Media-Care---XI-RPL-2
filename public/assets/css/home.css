@@ -27,6 +27,11 @@ body{
     background: rgba(255, 255, 255, 0.9);
 }
 
+/* Cek koneksi */
+.konek h2{
+    text-transform: uppercase;
+}
+
 /* widget */
 iframe{
     width: 100%;
@@ -36,10 +41,25 @@ iframe{
     opacity: 0.9;
 }
 
+/* tombol wa */
+#btnWa{
+    position: fixed;
+    right: 10vh;
+    bottom: 5vh;
+    font-size: 26px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #0CA678;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
 /* Tombol scroll to top */
 #btnTop{
     position: fixed;
-    right: 5vh;
+    right: 10vh;
     bottom: 5vh;
     font-size: 26px;
     padding: 10px 15px;
@@ -595,7 +615,12 @@ section{
     }
 
     #btnTop{
-        padding: 17px;
-        font-size: 23px;
+        right: 5vh;
+    }
+
+    #btnWa{
+        right: 5vh;
+        margin-right: 0;
+        bottom: 15vh;
     }
 }

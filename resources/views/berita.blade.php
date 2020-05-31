@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{asset('/assets/css/kontak.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/berita.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ff74694b5e.js" crossorigin="anonymous"></script>
+    
     <style>
         body{
             background: url("{{ asset('/assets/pict/Background.png') }}");
@@ -48,55 +49,51 @@
         </a>
 
         <div class="menu">
-            <a href="{{url('/home#kasus')}}">Data</a>
-            <a href="{{ url('/berita') }}">Berita</a>
+            <a href="{{ url('/home#kasus') }}">Data</a>
+            <a href="{{ url('/kontak') }}">Call Center & RS Rujukan</a>
             <a href="https://www.halodoc.com/layanan-rapid-test">Rapid Test Drivethru</a>
             <a href="{{ url('/login') }}" id="adm-log">Login Admin</a>
         </div>
     </div>
-
     <div class="container">
-        <div class="tools">
-            <input type="text" name="cari" id="cari" placeholder="Cari Kabupaten atau Kota">&emsp;
-            <input type="submit" value="Cari">&emsp;
-            <a href="{{ url('/kontak') }}"><button>Refresh</button></a>&emsp;
-            <a href="https://api.whatsapp.com/send?phone=6285697391854&text=Halo%20Admin%21%20Saya%20ingin%20tanya%20seputar%20PIKOBAR&source=&data=&app_absent="><div class="wa"><i class="fab fa-whatsapp"></i></div></a>
-        </div>
-        <div class="title"> 
-            <h1>Rumah Sakit Rujukan</h1>
-        </div>
-        <div class="rs-box">
-            
-            <div class="rs-con">
-                @foreach ($rs_rujukan as $raw)
-                <div class="rs-con-box">
-                    <h2>{{ $raw->nama_rs }}</h2>
-                    <p>{{ $raw->alamat }}</p>
-                    <div class="rs-con-box-in">
-                        <div class="rs-con-box2">{{ $raw->no_telp }}</div>
-                        <div class="rs-con-box2">{{ $raw->halaman_web }}</div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="padding-top: 0;">
         <div class="title">
-            <h1>Call Center</h1>
+            <h1>Berita Terkini</h1>
+            <h2>Seputar COVID-19</h2>
         </div>
-        <div class="rs-box">
-            <div class="rs-con">
-                @foreach ($call_center as $row)
-                <div class="rs-con-box">
-                    <h2>{{ $row->nama_kota }}</h2>
-                    <div class="rs-con-box-in">
-                        <div class="rs-con-box2">{{ $row->call_center }}</div>
-                        <div class="rs-con-box2">{{ $row->hotline }}</div>
+        <div class="content">
+            <div class="news">
+                <a href="#">
+                    <div class="news-con">
+                        <div class="news-con-left">
+                            <h3>Kabar Gembira, Antibodi Virus Corona Ditemukan</h3>
+                            <p><i>Rabu, 13 Mei 2020</i></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui voluptatibus eum pariatur maxime ipsa exercitationem accusamus vero odit, cupiditate totam architecto quidem non sapiente tempora. Commodi odit fugit praesentium?</p>
+                        </div>
                     </div>
-                </div>
-                @endforeach
+                </a>
+                <a href="#">
+                    <div class="news-con">
+                        <div class="news-con-left">
+                            <h3>Kabar Gembira, Antibodi Virus Corona Ditemukan</h3>
+                            <p><i>Rabu, 13 Mei 2020</i></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui voluptatibus eum pariatur maxime ipsa exercitationem accusamus vero odit, cupiditate totam architecto quidem non sapiente tempora. Commodi odit fugit praesentium?</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="news-con">
+                        <div class="news-con-left">
+                            <h3>Kabar Gembira, Antibodi Virus Corona Ditemukan</h3>
+                            <p><i>Rabu, 13 Mei 2020</i></p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui voluptatibus eum pariatur maxime ipsa exercitationem accusamus vero odit, cupiditate totam architecto quidem non sapiente tempora. Commodi odit fugit praesentium?</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="widget">
+                <!-- widget humas jabar --> 
+                <div id="widget-humas-jabar"></div>
+                <script src="http://humas.jabarprov.go.id/js/widget-humas.min.js"></script>
             </div>
         </div>
     </div>
@@ -113,12 +110,13 @@
         });
 
         window.onscroll = function() {scrollfunction()};
-        
+
         function scrollfunction() {
             if(document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
                 document.getElementById("navbar").className = "scroll";
                 document.getElementById("btnWa").className = "geser";
                 $('#btnTop').fadeIn();
+                
             } else {
                 document.getElementById("navbar").className = "";
                 document.getElementById("btnWa").className = "";
@@ -130,7 +128,9 @@
         $("#btnTop").click(function() {
             $('html, body').animate({scrollTop : 0}, 1000);
         });
-    </script>
 
+        //animate on scroll
+        // AOS.init();
+    </script>
 </body>
 </html>
