@@ -22,9 +22,13 @@ Route::get('/home', function() {
     return view('homepage');
 });
 
-Route::get('/admin', function() {
-    return view('admin');
-});
+Route::get('/admin', 'User@index');
+Route::get('/login', 'User@login');
+Route::post('/loginPost', 'User@loginPost');
+Route::get('/register', 'User@register');
+Route::post('/registerPost', 'User@registerPost');
+Route::get('/logout', 'User@logout');
+
 
 Route::get('/kontak', 'HealthController@indexKontak');
 Route::get('/news', 'HealthController@indexBerita');
