@@ -52,7 +52,7 @@
             <a href="{{ url('/home#kasus') }}">Data</a>
             <a href="{{ url('/kontak') }}">Call Center & RS Rujukan</a>
             <a href="https://www.halodoc.com/layanan-rapid-test">Rapid Test Drivethru</a>
-            <a href="{{ url('/admin') }}" id="adm-log">Admin</a>
+            <a href="{{ url('/admin') }}">Admin</a>
         </div>
     </div>
     <div class="container">
@@ -62,33 +62,17 @@
         </div>
         <div class="content">
             <div class="news">
+                @foreach($berita as $row)
                 <a href="#">
                     <div class="news-con">
                         <div class="news-con-left">
-                            <h3>Kabar Gembira, Antibodi Virus Corona Ditemukan</h3>
-                            <p><i>Rabu, 13 Mei 2020</i></p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui voluptatibus eum pariatur maxime ipsa exercitationem accusamus vero odit, cupiditate totam architecto quidem non sapiente tempora. Commodi odit fugit praesentium?</p>
+                            <h3>{{$row->judul}}</h3>
+                            <p><i>{{$row->tanggal}}</i></p>
+                            <p>{{$row->isi}}</p>
                         </div>
                     </div>
                 </a>
-                <a href="#">
-                    <div class="news-con">
-                        <div class="news-con-left">
-                            <h3>Kabar Gembira, Antibodi Virus Corona Ditemukan</h3>
-                            <p><i>Rabu, 13 Mei 2020</i></p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui voluptatibus eum pariatur maxime ipsa exercitationem accusamus vero odit, cupiditate totam architecto quidem non sapiente tempora. Commodi odit fugit praesentium?</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="news-con">
-                        <div class="news-con-left">
-                            <h3>Kabar Gembira, Antibodi Virus Corona Ditemukan</h3>
-                            <p><i>Rabu, 13 Mei 2020</i></p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui voluptatibus eum pariatur maxime ipsa exercitationem accusamus vero odit, cupiditate totam architecto quidem non sapiente tempora. Commodi odit fugit praesentium?</p>
-                        </div>
-                    </div>
-                </a>
+                @endforeach
             </div>
             <div class="widget">
                 <!-- widget humas jabar --> 

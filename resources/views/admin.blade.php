@@ -21,6 +21,6 @@
     <h2><a href="{{ url('/cc') }}">admin call center</a></h2>
     <h2><a href="{{ url('/rs') }}">admin rs rujuk</a></h2>
 
-    <h2><a href="/logout"></a></h2>
+    <h2><a href="{{url('/logout')}}">Logout</a></h2>
 </body>
 </html>

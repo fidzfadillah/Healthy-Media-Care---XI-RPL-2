@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.alert{
+    padding: 5vh;
+    font-size: 18px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.7);
+    float: left;
+    width: fit-content;
+    margin: 10px;
+    position: relative;
+}
+
+/*navbar*/
+#navbar{
+    position: fixed;
+    height: 80px;
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.menu{
+    position: absolute;
+    right: 10px;
+}
+
+.menu a{
+    color: #555;
+    text-decoration: none;
+    margin-left: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 20px;
+    padding: 25px 20px;
+}
+
+.menu a:hover{
+    /* color: rgb(255, 59, 134); */
+    background: rgba(200, 200, 200, 0.3);
+}
+
+.btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+.btn:hover > span{
+    background: rgb(255, 59, 134);
+}
+
+.btn span{
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: #555;
+}
+
+.box{
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105vh;
+    height: 60vh;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.form-login{
+    width: 50%;
+	height: 100%;
+	padding: 10vh;
+	background: #ffffff;
+	float: right;
+}
+
+.form-login h1{
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+    color: #555;
+}
+
+form{
+    height: 100%;
+}
+
+.txt{
+    position: relative;
+    margin: 30px 0;
+}
+
+.txt input{
+    font-size: 16px;
+	border: none;
+	border-bottom: 2px solid #555;
+	transition: linear 0.4s;
+	width: 100%;
+	background: none;
+	padding: 0 5px;
+	height: 40px;
+	outline: none;
+}
+
+.txt input:focus{
+	border-bottom: 2px solid rgb(255, 59, 134);
+}
+
+.btnn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnn button{
+    width: 14vh;
+    height: 5vh;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgb(255, 59, 134);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btnn button:hover{
+    background: #3498db;
+}

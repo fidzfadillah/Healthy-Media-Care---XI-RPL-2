@@ -82,10 +82,6 @@ body{
     padding: 25px 20px;
 }
 
-a#adm-log{
-    display: none;
-}
-
 .menu a:hover{
     /* color: rgb(255, 59, 134); */
     background: rgba(200, 200, 200, 0.3);

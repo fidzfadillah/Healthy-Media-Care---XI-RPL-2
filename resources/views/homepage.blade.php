@@ -80,7 +80,7 @@
             <a href="{{ url('/news') }}">Berita</a>
             <a href="{{ url('/kontak') }}">Call Center & RS Rujukan</a>
             <a href="https://www.halodoc.com/layanan-rapid-test">Rapid Test Drivethru</a>
-            <a href="{{ url('/admin') }}" id="adm-log">Admin</a>
+            <a href="{{ url('/admin') }}">Admin</a>
         </div>
     </div>
 
