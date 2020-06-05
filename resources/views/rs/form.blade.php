@@ -9,7 +9,7 @@
 	@if(!empty($rs))
 		@method('PATCH')
 	@endif
-	<h1>Form Berita</h1>
+	<h1>Form RS Rujukan</h1>
 	<table cellpadding="6" cellspacing="6">	
 		<tr>
 			<td>ID</td>
@@ -29,7 +29,7 @@
 		</tr>
 		<tr>
 			<td>Alamat Web</td>
-			<td><input type="text" name="alamat_web" value="{{ old('alamat_web', @$rs->alamat_web) }}" placeholder="Alamat Web"></td>
+			<td><input type="text" name="halaman_web" value="{{ old('halaman_web', @$rs->halaman_web) }}" placeholder="Alamat Web"></td>
 		</tr>
 		<tr align="center">
 			<td colspan="2"><input type="submit" value="Simpan"></td>

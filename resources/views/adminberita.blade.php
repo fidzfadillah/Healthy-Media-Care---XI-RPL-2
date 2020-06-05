@@ -4,8 +4,11 @@
     <title></title>
 </head>
 <body>
-    <a href="{{ url('/berita/tambah') }}">+</a>
-
+    <a href="{{ url('/berita/tambah') }}">+</a>&emsp;
+    <a href="{{url('/admin')}}">Home admin</a>&emsp;
+    <a href="{{ url('/cc') }}">admin call center</a>&emsp;
+    <a href="{{ url('/rs') }}">admin rs rujuk</a>&emsp;
+    <a href="{{url('/logout')}}">Logout</a>
     <div class="back">
         <table>
             <thead>

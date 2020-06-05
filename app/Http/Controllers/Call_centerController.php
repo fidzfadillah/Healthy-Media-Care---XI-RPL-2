@@ -20,7 +20,7 @@ class Call_centerController extends Controller
     public function store(Request $request)
     {
     	$rule = [
-    		'id' => 'required|numeric|unique:call_center',
+    		'id' => 'required|numeric|unique:t_callcenter',
     		'nama_kota' => 'required',
     		'call_center' => 'required',
     		'hotline' => 'required'

@@ -20,11 +20,11 @@ class RsController extends Controller
     public function store(Request $request)
     {
     	$rule = [
-    		'id' => 'required|numeric|unique:rumah_sakit',
+    		'id' => 'required|numeric|unique:t_rs_rujukan',
     		'nama_rs' => 'required',
     		'alamat' => 'required',
     		'no_telp' => 'required',
-    		'alamat_web' => 'required'
+    		'halaman_web' => 'required'
     	];
     	$this->validate($request, $rule);
 
@@ -37,7 +37,7 @@ class RsController extends Controller
     	}
 
     	else {
-    		return redirect('/rs/create')->with('error', 'Data gagal ditambahkan.');
+    		return redirect('/rs/tambah')->with('error', 'Data gagal ditambahkan.');
     	}
     }
 
@@ -53,7 +53,7 @@ class RsController extends Controller
             'nama_rs' => 'required',
             'alamat' => 'required',
             'no_telp' => 'required',
-            'alamat_web' => 'required'
+            'halaman_web' => 'required'
         ];
         $this->validate($request, $rule);
 
