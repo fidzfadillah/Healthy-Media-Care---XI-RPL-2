@@ -20,12 +20,12 @@
 				<td><input type="text" name="judul" value="{{ old('judul', @$berita->judul) }}" placeholder="Judul"></td>
 			</tr>
 			<tr>
-				<td>Waktu</td>
-				<td><input type="text" name="waktu" value="{{ old('waktu', @$berita->waktu) }}" placeholder="Waktu"></td>
+				<td>Tanggal</td>
+				<td><input type="date" name="tanggal" value="{{ old('tanggal', @$berita->tanggal) }}" placeholder="tanggal"></td>
 			</tr>
 			<tr>
 				<td>Berita</td>
-				<td><input type="text" name="isi_berita" value="{{ old('isi_berita', @$berita->isi_berita) }}" placeholder="Berita"></td>
+				<td><input type="text" name="isi" value="{{ old('isi', @$berita->isi) }}" placeholder="Berita"></td>
 			</tr>
 			<tr align="center">
 				<td colspan="2"><input type="submit" value="Simpan"></td>

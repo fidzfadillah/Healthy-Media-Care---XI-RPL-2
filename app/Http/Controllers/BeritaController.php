@@ -21,15 +21,16 @@ class BeritaController extends Controller
     public function store(Request $request)
     {
     	$rule = [
-    		'id' => 'required|numeric|unique:berita',
-    		'judul' => 'required',
-    		'isi_berita' => 'required'
+    		'id' => 'required|numeric|unique:t_berita',
+            'judul' => 'required',
+            'tanggal' => 'required',
+    		'isi' => 'required'
     	];
     	$this->validate($request, $rule);
 
     	$input = $request->all();
     	unset($input['_token']);
-    	$status = \DB::table('berita')->insert($input);
+    	$status = \DB::table('t_berita')->insert($input);
 
     	if ($status) {
     		return redirect('/berita')->with('success', 'Data berhasil ditambahkan.');
@@ -50,14 +51,15 @@ class BeritaController extends Controller
     {
         $rule = [
             'judul' => 'required',
-            'isi_berita' => 'required'
+            'tanggal' => 'required',
+            'isi' => 'required'
         ];
         $this->validate($request, $rule);
 
         $input = $request->all();
         unset($input['_token']);
         unset($input['_method']);
-        $status = \DB::table('berita')->where('id', $id)->update($input);
+        $status = \DB::table('t_berita')->where('id', $id)->update($input);
 
         if ($status) {
             return redirect('/berita')->with('success', 'Data berhasil diubah.');
