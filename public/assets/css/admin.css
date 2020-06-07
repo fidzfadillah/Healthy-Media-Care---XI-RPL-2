@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+/*navbar*/
+#navbar{
+    position: fixed;
+    height: 80px;
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.menu{
+    position: absolute;
+    right: 10px;
+}
+
+.menu a{
+    color: #555;
+    text-decoration: none;
+    margin-left: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 20px;
+    padding: 25px 20px;
+}
+
+.menu a:hover{
+    /* color: rgb(255, 59, 134); */
+    background: rgba(200, 200, 200, 0.3);
+}
+
+.btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+.btn:hover > span{
+    background: rgb(255, 59, 134);
+}
+
+.btn span{
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: #555;
+}
+
+.container{
+    padding: 15vh 10vh;
+}
+
+.container h1, .container h2{
+    text-transform: uppercase;
+}
+
+.container h1{
+    font-size: 50px;
+}
+
+.container h2{
+    font-size: 40px;
+}
+
+.txt h3{
+    font-size: 30px;
+}
+
+.txt a{
+    text-decoration: none;
+    margin: 0 3vh;
+}
